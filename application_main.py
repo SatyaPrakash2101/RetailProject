@@ -11,7 +11,6 @@ if __name__ == '__main__':
     spark = Utils.get_spark_session(job_run_env)
     print("Ceated Spark Session")
 
-
     orders_df = DataReader.read_orders(spark,job_run_env)
     orders_filtered = DataManipulation.filter_complete_orders(orders_df)
 
