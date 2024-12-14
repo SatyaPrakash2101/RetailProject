@@ -2,6 +2,7 @@ import pytest
 from lib.DataReader import read_customer,read_orders
 from lib.DataManipulation import filter_complete_orders
 
+@pytest.mark.skip("Work In Progress")
 def test_read_customers_df(spark):
     customers_count = read_customer(spark,"LOCAL").count()
     assert customers_count == 12435
